@@ -10,7 +10,7 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-   html {
+html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
@@ -111,15 +111,16 @@ body:after {
     right: 0;
     display: block;
     position: fixed;
-    background-image: linear-gradient(to bottom, #000, rgba(0,0,0,0));
+    background-image: linear-gradient(to bottom, #000, rgba(0, 0, 0, 0));
     max-height: 30vh;
-    z-index:500;
+    z-index: 500;
     pointer-events: none;
 }
 
 .starry-background {
     position: fixed;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 150%;
     overflow: hidden;
@@ -129,51 +130,68 @@ body:after {
 
 .starry-background__image {
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: url('../img/splash/star-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
-    background-color: RGBA(1,4,15,1.00);
+    background-color: RGBA(1, 4, 15, 1.00);
 }
-.star--big {
-  width: 87px;
-  height: 74px;
-  background: url('../img/splash/sprite_star_slow.png') left center;
-  animation: bigstar 10s steps(77) infinite;
 
-  position:absolute;
-  top: 0.13%;
-  left: 52.6%;
-  transform:translate(-50% , -50%) rotate(40deg);
+.star--big {
+    width: 87px;
+    height: 74px;
+    background: url('../img/splash/sprite_star_slow.png') left center;
+    animation: bigstar 10s steps(77) infinite;
+
+    position: absolute;
+    top: 0.13%;
+    left: 52.6%;
+    transform: translate(-50%, -50%) rotate(40deg);
 }
+
 .star--small {
-  width: 40px;
-  height: 34px;
-  background: url('../img/splash/star_small.png') left center;
-  animation: smallstar 7s steps(77) infinite;
-  z-index:1;
-  position:absolute;
-  top: 0.13%;
-  left: 70%;
-  transform:translate(-50% , -50%);
+    width: 40px;
+    height: 34px;
+    background: url('../img/splash/star_small.png') left center;
+    animation: smallstar 7s steps(77) infinite;
+    z-index: 1;
+    position: absolute;
+    top: 0.13%;
+    left: 70%;
+    transform: translate(-50%, -50%);
 }
 
 @keyframes bigstar {
-    30% { background-position: -6699px; }
-    100% { background-position: -6699px; }
+    30% {
+        background-position: -6699px;
+    }
+
+    100% {
+        background-position: -6699px;
+    }
 }
+
 @keyframes smallstar {
-     30% { background-position: -3080px; }
-    100% { background-position: -3080px; }
+    30% {
+        background-position: -3080px;
+    }
+
+    100% {
+        background-position: -3080px;
+    }
 }
+
 .page {
     max-width: 1618px;
     margin: auto;
     position: relative;
     min-height: 91vh;
-    padding:0 5%;
-    
+    padding: 0 5%;
+
 }
 
 .mountain {
@@ -181,11 +199,14 @@ body:after {
 
     position: absolute;
     /*top: 10%;*/
-    left: 0; right: 0;
+    left: 0;
+    right: 0;
     top: 100%;
-    top: calc( 100% - 330px ); /* what is this? */
-    /* transform: translateY(-23.2053422371%); */ /* part of mountain that contains top of mountain */
-    transform:translateY(-16.205342%);
+    top: calc(100% - 330px);
+    /* what is this? */
+    /* transform: translateY(-23.2053422371%); */
+    /* part of mountain that contains top of mountain */
+    transform: translateY(-16.205342%);
 }
 
 .button {
@@ -195,9 +216,11 @@ body:after {
 
 .buttons {
     position: absolute;
-    left: 0; right: 0;
+    left: 0;
+    right: 0;
     padding: 0;
-    top: 0; bottom: 0;
+    top: 0;
+    bottom: 0;
     margin: 0;
 }
 
@@ -205,7 +228,8 @@ body:after {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0; bottom: 0;
+    right: 0;
+    bottom: 0;
 }
 
 
@@ -218,23 +242,26 @@ body:after {
 
     position: relative;
 }
+
 .mountain__image {
     margin: auto;
     display: block;
     /*max-width: 100%;*/
     width: 90%;
-    padding:0 5%;
+    padding: 0 5%;
     height: auto;
 }
+
 .mountain__image--hidden {
-    visibility:hidden;
+    visibility: hidden;
 }
+
 .mountain__text {
-    position:absolute;
+    position: absolute;
     top: 18.1%;
     left: 50%;
     width: 32%;
-    transform: translate(-50% , 0);
+    transform: translate(-50%, 0);
 }
 
 .buttons .button--distribution,
@@ -269,6 +296,7 @@ body:after {
     left: 50%;
     transform: translateX(-76%);
 }
+
 .button--app-store {
     width: 37.9%;
     position: absolute;
@@ -286,7 +314,7 @@ body:after {
 }
 
 .button span {
-    font-family: "letter-gothic-std",monospace;
+    font-family: "letter-gothic-std", monospace;
     font-size: 10px;
     font-weight: 200;
     text-transform: uppercase;
@@ -301,19 +329,20 @@ body:after {
     right: 0;
     bottom: 0;
     margin: auto;
-    height: calc( 12px + (35 - 12) * (100vw - 320px) / ( 2000 - 320 ) );
+    height: calc(12px + (35 - 12) * (100vw - 320px) / (2000 - 320));
     text-align: center;
     letter-spacing: 0.1em;
-    text-shadow: 0px 0px 2px rgba(0,0,0, 0);
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0);
     /*font-size: calc(1em + 3vw);*/
     padding: 0 8%;
-    font-size: calc( 12px + (35 - 12) * (100vw - 320px) / ( 2000 - 320 ) );
-    
+    font-size: calc(12px + (35 - 12) * (100vw - 320px) / (2000 - 320));
+
 
 }
+
 .button .overlay {
     height: 100%;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     vertical-align: middle;
 }
 
@@ -323,23 +352,25 @@ body:after {
         height: 60px;
     }
 }
+
 @media screen and (max-width: 700px) {
     .button span {
-        font-size: calc( 9px + (35 - 9) * (100vw - 320px) / ( 2000 - 320 ) );
-        height: calc( 9px + (35 - 9) * (100vw - 320px) / ( 2000 - 320 ) );
+        font-size: calc(9px + (35 - 9) * (100vw - 320px) / (2000 - 320));
+        height: calc(9px + (35 - 9) * (100vw - 320px) / (2000 - 320));
     }
 }
+
 @media screen and (max-width: 350px) {
     .button span {
-        font-size:18px;
-        height:15px;
+        font-size: 18px;
+        height: 15px;
     }
 }
 
 .button.hover span {
     opacity: 1;
     letter-spacing: 0.2em;
-    text-shadow: 15px 15px 2px rgba(0,0,0, .5);
+    text-shadow: 15px 15px 2px rgba(0, 0, 0, .5);
 }
 
 .button.hover video {
@@ -350,7 +381,10 @@ body:after {
 .button a {
     display: block;
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
     display: flex;
     justify-content: center;
@@ -366,17 +400,18 @@ body:after {
 .water {
     position: fixed;
     bottom: -160px;
-    left: 0; right: 0;
+    left: 0;
+    right: 0;
     height: 566px;
     height: 575px;
     opacity: .95;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .water__video {
-    width:100%;
-    height:100%;
-    object-fit:cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 #space,
@@ -385,228 +420,243 @@ body:after {
     width: 100%;
     height: 100%;
 }
+
 .stars {
     position: fixed;
     width: 100%;
     height: 100%;
 }
+
 /* Z-indexes */
 
 .mountain--image {
-    z-index:99;
+    z-index: 99;
 }
+
 .water {
-    z-index:102;
+    z-index: 102;
 }
+
 .mountain--text {
-    z-index:103;
+    z-index: 103;
 }
+
 .starry-background__image {
-    z-index:98;
+    z-index: 98;
 }
+
 .stars {
     z-index: 100;
 }
 
 @media screen and (max-width: 615px) {
     .page {
-        margin-bottom:900px;
+        margin-bottom: 900px;
 
     }
+
     .star--big {
-        display:none;
+        display: none;
     }
+
     .star--small-10,
     .star--small-11,
     .star--small-12,
     .star--small-13,
     .star--small-14,
     .star--small-15 {
-        display:none;
+        display: none;
     }
 
 }
+
 @media screen and (max-width: 500px) {
     .page {
-        margin-bottom:700px;
+        margin-bottom: 700px;
 
     }
 }
+
 @media screen and (max-width: 350px) {
     .page {
-        margin-bottom:500px;
+        margin-bottom: 500px;
     }
 }
+
 @media screen and (max-height: 916px) {
     .page {
-        margin-top:10%;
+        margin-top: 10%;
     }
 }
 
 
 .arrow {
     position: fixed;
-    z-index:105;
-    fill:white;
-    bottom:5px;
+    z-index: 105;
+    fill: white;
+    bottom: 5px;
     left: 50%;
-    transform:translateX(-50%);
-    width:30px;
-    height:20px;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 20px;
     animation: jump 2s infinite;
 }
+
 @keyframes jump {
-    0%, 20%, 50%, 80%, 100% {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateY(0);
-      }
-        40% {
+    }
+
+    40% {
         transform: translateY(-30px);
-      }
-        60% {
+    }
+
+    60% {
         transform: translateY(-15px);
-      }
-  }
- 
+    }
+}
+
 
 
 /* MENU */
 .bg-cover {
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #fff;
-	z-index: 0;
-	transition: all 350ms ease;
-	opacity: 0;
-	visibility: hidden;
-	pointer-events: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 0;
+    transition: all 350ms ease;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .prompt {
-	position: fixed;
-	width: 100%;
-	text-align: center;
-	line-height: 114px;
-	font-family: "letter-gothic-std",monospace;
-	color: #666;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    line-height: 114px;
+    font-family: "letter-gothic-std", monospace;
+    color: #666;
 }
 
 .reveal {
-	opacity: .85;
-	display: block;
-	pointer-events: auto;
-	visibility: visible;
+    opacity: .85;
+    display: block;
+    pointer-events: auto;
+    visibility: visible;
 }
 
 .hamburger-shell {
-	margin: 0;
-	position: fixed;
-	overflow: hidden;
-	width: 70px;
-	height: 100px;
-	overflow: auto;
-	left: calc(100% - 100px);
+    margin: 0;
+    position: fixed;
+    overflow: hidden;
+    width: 70px;
+    height: 100px;
+    overflow: auto;
+    left: calc(100% - 100px);
     top: 20px;
-    z-index:5000;
+    z-index: 5000;
 }
 
-.top, .middle{
-	position: absolute;
-	width: 62px;
-	height: 5px;
-	background-color: white;
-	transition: all 350ms ease-in-out;
-	top: 20px;
+.top,
+.middle {
+    position: absolute;
+    width: 62px;
+    height: 5px;
+    background-color: white;
+    transition: all 350ms ease-in-out;
+    top: 20px;
 }
 
 .middle {
-	top: 35px;
+    top: 35px;
 }
 
 #menu {
     position: fixed;
-    z-index:5000;
-	left: calc(100% - 292px);
-	top: 0;
-	color: white;
-	display: none;
-	margin: 120px 30px;
-	text-decoration: none;
-	font-family: "letter-gothic-std",monospace;
-	font-weight: 100;
-	font-size: 20px;
-	text-transform: uppercase;
-	color: #333;
-	padding: 24px;
-	width: 200px;
-	text-align: right;
+    z-index: 5000;
+    left: calc(100% - 292px);
+    top: 0;
+    color: white;
+    display: none;
+    margin: 120px 30px;
+    text-decoration: none;
+    font-family: "letter-gothic-std", monospace;
+    font-weight: 100;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #333;
+    padding: 24px;
+    width: 200px;
+    text-align: right;
 }
 
 #menu a li {
-	text-decoration: none!important;
-	padding-bottom: 10px;
-	margin-bottom: 12px;
-	border-bottom: 1px solid white;
-	list-style: none;
-	color: white;
-	transition: all 150ms ease;
+    text-decoration: none !important;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid white;
+    list-style: none;
+    color: white;
+    transition: all 150ms ease;
 }
 
 #menu a li:hover {
-	color: #00abff;
-	padding-right: 3px;
+    color: #00abff;
+    padding-right: 3px;
 }
-
-#menu a li:hover:after {
-}
-
-
 
 #menu a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 .rotate {
-	transform: rotate(225deg);
-	-webkit-transform: rotate(225deg);
-	top: 30px;
-	background-color: white;
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+    top: 30px;
+    background-color: white;
     height: 5px;
 }
 
 .rotate-back {
-	transform: rotate(-225deg);
-	-webkit-transform: rotate(-225deg);
-	top: 30px;
-	background-color: white;
+    transform: rotate(-225deg);
+    -webkit-transform: rotate(-225deg);
+    top: 30px;
+    background-color: white;
     height: 5px;
 }
 
 .top {
--webkit-animation-delay: 100ms;
+    -webkit-animation-delay: 100ms;
 }
 
 .middle {
--webkit-animation-delay: 250ms;
+    -webkit-animation-delay: 250ms;
 }
 
 .bottom {
-	-webkit-animation-delay: 400ms;
+    -webkit-animation-delay: 400ms;
 }
 
 .menu-name {
-    
-	font-family: "letter-gothic-std",monospace;
-	font-weight: 900;
-	color: white;
-	font-size: 26.5px;
-	text-decoration: none;
-	position: absolute;
-	top: 45px;
-	left: -1px;
-	transition: all 350ms;
+
+    font-family: "letter-gothic-std", monospace;
+    font-weight: 900;
+    color: white;
+    font-size: 26.5px;
+    text-decoration: none;
+    position: absolute;
+    top: 45px;
+    left: -1px;
+    transition: all 350ms;
 }
 
 .bump {
@@ -681,8 +731,10 @@ body:after {
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
 
 .clearfix:after {
@@ -700,9 +752,9 @@ body:after {
 }
 
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -713,13 +765,15 @@ body:after {
    ========================================================================== */
 
 @media print {
+
     *,
     *:before,
     *:after,
     *:first-letter,
     *:first-line {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+        color: #000 !important;
+        /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
@@ -731,11 +785,11 @@ body:after {
     }
 
     a[href]:after {
-        content: " (" attr(href) ")";
+        content: " ("attr(href) ")";
     }
 
     abbr[title]:after {
-        content: " (" attr(title) ")";
+        content: " ("attr(title) ")";
     }
 
     /*
